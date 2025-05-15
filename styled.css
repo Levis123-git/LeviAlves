@@ -1,0 +1,371 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0A0F1E; /* Dark blue/black background from image */
+    color: #D0D0D0; /* Light grey text */
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Max width for larger screens */
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: #10162F; /* Slightly lighter dark shade for header */
+    color: #ffffff;
+    padding: 2.5rem 0;
+    text-align: center;
+    /* border-bottom: #3B82F6 3px solid; /* Blue accent color from image */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #E5E7EB; /* Off-white */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #9CA3AF; /* Lighter grey */
+}
+
+nav {
+    background: #10162F; /* Consistent with header */
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav .container ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+}
+
+nav .container ul li {
+    display: inline-block; /* Changed from inline for better spacing control */
+    margin: 0 10px;
+}
+
+nav .container ul li a {
+    color: #E5E7EB;
+    text-decoration: none;
+    padding: 12px 18px;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+nav .container ul li a:hover,
+nav .container ul li a.active {
+    color: #FFFFFF;
+    background-color: #3B82F6; /* Blue accent */
+}
+
+
+section {
+    padding: 3rem 0; /* Increased padding */
+    border-bottom: 1px solid #1E293B; /* Darker separator, more subtle */
+}
+
+section:last-of-type { /* Ensure only the last section has no border */
+    border-bottom: none;
+}
+
+section h2 {
+    text-align: left; /* Align to left as in image */
+    margin-bottom: 2rem; /* Increased margin */
+    font-size: 2.2rem; /* Slightly larger */
+    color: #E5E7EB; /* Off-white for headings */
+    position: relative;
+    padding-bottom: 0.5rem; /* Space for the line */
+}
+
+section h2::after { /* Underline style from image */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px; /* Length of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #3B82F6; /* Blue accent color */
+    border-radius: 2px;
+}
+
+
+ul {
+    list-style: none; /* Remove default list style, will style per card */
+    padding-left: 0; /* Reset padding */
+}
+
+ul li { /* General list item, can be overridden */
+    margin-bottom: 0.75rem; /* Slightly more space */
+    padding-left: 1.5em; /* Space for custom bullet or icon */
+    position: relative;
+}
+
+ul li::before { /* Custom bullet point style */
+    content: '›'; /* Using a right-pointing angle bracket */
+    position: absolute;
+    left: 0;
+    color: #3B82F6; /* Blue accent */
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+
+/* Video Carousel */
+.video-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Increased gap */
+    padding: 25px 0;
+    background-color: #10162F; /* Consistent dark background */
+    overflow-x: auto;
+}
+
+.video-carousel video {
+    width: 48%; /* Slightly adjust for better fit with gap */
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px; /* Slightly more rounded */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+/* Skills Section - Card Layout Placeholder */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 25px; /* Gap between cards */
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background-color: #10162F; /* Card background - slightly lighter than page bg or same as header */
+    padding: 1.8rem;
+    border-radius: 10px; /* Slightly more rounded */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid #1E293B; /* Subtle border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4); /* Brighter blueish glow on hover */
+    border-color: #3B82F6; /* Accent color border on hover */
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    color: #3B82F6; /* Blue accent for card titles */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.skill-card h3 .icon { /* Placeholder for icon */
+    margin-right: 0.75rem;
+    font-size: 1.3em; /* Adjust if using actual icons */
+}
+
+.skill-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-card ul li {
+    margin-bottom: 0.6rem;
+    color: #B0B0B0; /* Lighter text for list items in cards */
+    font-size: 0.95rem;
+    padding-left: 1.5em; /* Space for custom bullet */
+    position: relative;
+}
+
+.skill-card ul li::before {
+    content: '›'; /* Custom bullet for card lists */
+    position: absolute;
+    left: 0;
+    color: #3B82F6; /* Blue accent */
+    font-weight: bold;
+}
+
+
+/* Contact Form and Links */
+.contact-form {
+    text-align: center;
+    padding: 2rem 0; /* Add some padding to the section itself */
+}
+
+.contact-form h2 { /* Title styling already handled by general section h2 */
+    margin-bottom: 1.5rem;
+}
+
+.contact-form p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #B0B0B0;
+}
+
+.contact-form a {
+    display: inline-block;
+    margin: 0.75rem;
+    padding: 12px 25px;
+    background-color: #3B82F6; /* Blue accent */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.contact-form a:hover {
+    background-color: #2563EB; /* Darker blue on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2.5rem 0;
+    background: #080C1A; /* Even darker for footer */
+    color: #6B7280; /* Muted grey for footer text */
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) { /* Adjusted breakpoint */
+    .container {
+        width: 90%;
+    }
+    .video-carousel video {
+        max-width: 380px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    nav .container ul {
+        display: flex; /* Allow wrapping for nav items */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav .container ul li {
+        margin: 5px; /* Adjust margin for wrapped items */
+    }
+    
+    nav .container ul li a {
+        padding: 10px 15px;
+    }
+
+    section {
+        padding: 2.5rem 0;
+    }
+
+    section h2 {
+        font-size: 1.9rem;
+        text-align: center; /* Center section titles on smaller screens */
+    }
+    section h2::after { /* Center the underline as well */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .video-carousel {
+        flex-direction: column;
+    }
+
+    .video-carousel video {
+        width: 90%;
+        max-width: none; /* Allow full width when stacked */
+        margin-bottom: 20px;
+    }
+
+    .video-carousel video:last-child {
+        margin-bottom: 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+    header h1 {
+        font-size: 1.9rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
+
+    .contact-form a {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        width: calc(50% - 1.5rem); /* Two buttons per row */
+        box-sizing: border-box;
+    }
+    .skill-card h3 {
+    font-size: 1.3rem;
+    }
+}
+
+/* Scroll Animation Classes */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profile-picture img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #3B82F6;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
